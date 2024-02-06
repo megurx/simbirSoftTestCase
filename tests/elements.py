@@ -63,4 +63,5 @@ class FormPage:
         city_option.click()
     
     def submit_form(self):
-        self.sumbit.click()
+        sumbit = self.sumbit
+        self.driver.execute_script("arguments[0].click();", sumbit)
