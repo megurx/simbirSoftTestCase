@@ -1,8 +1,7 @@
 import pytest
 from selenium import webdriver
 from elements import FormPage
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+import time
 
 @pytest.fixture
 def browser():
@@ -23,4 +22,5 @@ def test_fill_form(browser):
     elements.select_gender()
     elements.select_hobby()
     elements.submit_form()
+    time.sleep(10)
     browser.close()
